@@ -1,0 +1,72 @@
+:root {
+    --background: rgb(0, 0, 0);
+    --background-2: rgb(54, 54, 54);
+    --primary:rgb(47, 108, 143);
+    --primary-dark: rgb(18, 49, 70);
+    --accent: white;
+    --font-normal: Verdana, Geneva, Tahoma, sans-serif;;
+    --font-code: 'Courier New', Courier, monospace;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    color: var(--primary);
+    background-color: var(--background);
+    font-family: var(--font-normal);
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:2rem;
+}
+p {
+    color:var(--accent);
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    flex: 1 1 30%;
+    position: relative;
+    border:2px var(--accent) dashed;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.card:hover, .card:hover h2 {
+    box-shadow: 
+        0 0 15px var(--accent),
+        0 0 30px var(--primary)
+
+    
+}
+.card h2 {
+    background-color: var(--background-2);
+    position:relative;
+    margin:10px;
+    margin-top: -20px;
+    border:1px var(--accent) solid;
+    border-radius: 5px;
+    padding:5px;
+}
+
+.card p {
+    margin:5px;
+    margin-top:30px;
+    color:var(--primary);
+}
+
+.card pre {
+    background-image: linear-gradient(var(--primary-dark),var(--primary));
+    color:var(--accent);
+    margin:10px;
+    padding:5px;
+    border-radius: 5px;
+    font-family: var(--font-code);
+    user-select: all;
+}
